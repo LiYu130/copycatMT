@@ -1,0 +1,239 @@
+/**index.wxss**/
+
+page {
+  width: calc(100% - 40rpx);
+  margin: auto;
+}
+
+.path-icon {
+  font-size: 34rpx;
+}
+
+.path-icon text {
+  vertical-align: middle;
+}
+
+.path-icon .icon {
+  font-size: 36rpx;
+  font-weight: 900;
+}
+
+.icon-back {
+  font-size: 20rpx;
+  /* color:#80848f; */
+  font-weight: 900;
+}
+.search-box {
+  padding: 15rpx 0;
+}
+.search {
+  font-size: 28rpx;
+  background: #eff1f0;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* margin-top: 20rpx; */
+  border-radius: 15rpx;
+  display: flex;
+}
+
+.search text {
+  color: #909090;
+}
+
+.search icon {
+  vertical-align: middle;
+  font-size: 22rpx;
+  height: 60rpx;
+  padding: 0 10rpx 0 15rpx;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.nav-img {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.nav > view {
+  width: 20%;
+  margin-bottom: 35rpx;
+}
+
+/* 神价格 */
+.preference-price {
+ /* height: 165rpx; */
+}
+.preference-price .pre-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.pre-left {
+  font-weight: 900;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+}
+
+.pre-left text {
+  font-size: 28rpx;
+  color: #7d7d7d;
+  padding-left: 15rpx;
+  font-weight: 500;
+}
+
+.pre-right {
+  font-size: 28rpx;
+  vertical-align: middle;
+  color: #7d7d7d;
+}
+
+.pre-content  {
+  width: 40%;
+  margin-right: 15rpx; 
+  display: inline-block;
+  box-shadow: 2px 2px 5px #ebe9eb;
+  border-radius: 20rpx;
+}
+.pre-content image {
+  width: 100%;
+  border-radius: 20rpx 20rpx 0 0;
+  overflow: hidden;
+}
+
+.pre-con-title {
+  font-weight: 900;
+  font-size: 32rpx;
+  padding: 15rpx 0 10rpx 15rpx;
+}
+
+.pre-con-price {
+  color: #cb7874;
+  font-size: 32rpx;
+  font-weight: 900;
+  word-spacing:0;
+ letter-spacing: 0;
+ padding-left: 15rpx;
+ padding-bottom: 20rpx;
+}
+
+.pre-con-price text:nth-of-type(1) {
+  font-size: 28rpx;
+}
+
+.pre-con-price text:nth-of-type(2) {
+  font-weight: 500;
+  padding-left: 10rpx;
+  color: #7d7d7d;
+  font-size: 28rpx;
+  text-decoration:line-through;
+}
+
+/* 为你优选 */
+.cho-name,.cho-reason {
+  letter-spacing: 4rpx;
+   overflow: hidden;/*超出部分隐藏*/
+    text-overflow:ellipsis;/* 超出部分显示省略号 */
+    white-space: nowrap;/*规定段落中的文本不进行换行 */
+    width: 100%;/*需要配合宽度来使用*/
+    font-size: 28rpx;
+}
+.cho-reason {
+  color: #7d7d7d;
+  margin-bottom: 20rpx;
+}
+
+/* 横向轮播图 */
+.lunImg {
+  width: 100%;
+}
+
+/* 附近商家 */
+.nearby {
+  display: flex;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #7d7d7d;
+}
+.nearby view {
+  padding: 30rpx 0;
+  text-align: center;
+  flex: 1;
+}
+.nearby view:focus {
+  color: #000;
+}
+.nearby view:nth-of-type(1) {
+  padding-left: 0;
+   text-align: left;
+}
+.nearby view:nth-of-type(5) {
+  padding-right: 0;
+   text-align: right;
+}
+.near-content {
+  display: flex;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+}
+.near-left {
+  width: 30%;
+  margin-right: 20rpx;
+}
+.near-left image{
+  width: 100%;
+}
+.near-right {
+  flex: 1;
+}
+.near-right > view {
+  margin-bottom: 15rpx;
+}
+.near-right .near-con-title {
+  font-weight: 900;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  padding-bottom: 15rpx;
+}
+.near-con-appraise {
+  display: flex;
+  justify-content: space-between;
+}
+.near-con-preference view{
+  display: inline-block;
+  border: 1px solid #c18286;
+  color: #c18286;
+  padding: 0 5rpx;
+  margin-right: 10rpx;
+}
+.near-con-old {
+  text-decoration: line-through;
+  color: #7d7d7d;
+}
+
+/* 固定 */
+.fixed-style {
+  position: fixed;
+  background: #fff;
+  width: calc(100% - 40rpx);
+  z-index: 2;
+  top: 0;
+}
+
+.fixed-style-near {
+  position: fixed;
+  background: #fff;
+  width: calc(100% - 40rpx);
+  z-index: 2;
+  top: 75rpx;
+}

@@ -1,0 +1,48 @@
+/**app.wxss**/
+/**app.wxss**/
+@font-face {
+  font-family: 'iconfont';  /* project id 1312157 */
+  src: url('//at.alicdn.com/t/font_1312157_gn3xcb03f0d.eot');
+  src: url('//at.alicdn.com/t/font_1312157_gn3xcb03f0d.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1312157_gn3xcb03f0d.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1312157_gn3xcb03f0d.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1312157_gn3xcb03f0d.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1312157_gn3xcb03f0d.svg#iconfont') format('svg');
+}
+.iconfont {
+ font-family:"iconfont" !important;
+ font-size:60rpx;
+ font-style:normal;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+.icon-triangle-copy-copy-copy:before {
+  content: "\e604";
+}
+
+.icon-shaixuan:before {
+  content: "\e624";
+}
+
+.icon-xingxing:before {
+  content: "\e649";
+}
+
+.icon-dianpu:before {
+  content: "\e603";
+}
+
+.icon-sousuo:before {
+  content: "\e602";
+}
+
+.icon-fanhui:before {
+  content: "\e601";
+}
+
+.icon-dingweiweizhizuobiaoxianxing:before {
+  content: "\e600";
+}
+.navigator-hover {
+  background: #fff;
+}

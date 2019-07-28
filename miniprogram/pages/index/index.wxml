@@ -1,0 +1,120 @@
+<!--index.wxml-->
+<!-- 头部 -->
+<navigator url="pages/path/path" class="path-icon" hover-class="navigator-hover">
+  <text class="iconfont icon-dingweiweizhizuobiaoxianxing icon"></text>
+  <text style="padding:5rpx">东山广场</text>
+  <text class="iconfont icon-fanhui icon-back"></text>
+</navigator>
+
+<!-- 搜索 -->
+<view class="search-box {{ fixedEl ? 'fixed-style' : ''}}" bindtap="aaa">
+  <view class="search" >
+    <icon class="iconfont icon-sousuo"></icon>
+    <text>千秋便当屋 满25减13</text>
+  </view>
+</view>
+
+<!-- 小功能 -->
+<swiper indicator-dots autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgArr}}" wx:key="index">
+    <swiper-item>
+      <view class="nav">
+        <block wx:for="{{item}}" wx:key="index" wx:for-item="itemArr">
+          <view>
+            <image class="nav-img" src="{{itemArr.url}}"></image>
+            <view>{{itemArr.word}}</view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 神价格 -->
+<view class="preference-price" style="margin: 55rpx 0">
+  <view class="pre-title">
+    <view class="pre-left">神价格
+      <text>这么买更优惠</text>
+    </view>
+    <view class="pre-right">更多
+      <text class="iconfont icon-fanhui icon-back"></text>
+    </view>
+  </view>
+  <scroll-view scroll-x style="width:100%;white-space: nowrap;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <block wx:for="{{prePriceArr}}" wx:key="index">
+      <view class="pre-content">
+        <image mode="widthFix" src="{{item.url}}"></image>
+        <view class="pre-con-title">{{item.name}}</view>
+        <view class="pre-con-price">
+          <text>￥</text>{{item.newprice}}
+          <text>￥{{item.oldprice}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+
+<!-- 为你优选 -->
+<view class="preference-price">
+  <view class="pre-title">
+    <view class="pre-left">为你优选</view>
+    <view class="pre-right">更多
+      <text class="iconfont icon-fanhui icon-back"></text>
+    </view>
+  </view>
+  <scroll-view scroll-x style="width:100%;white-space: nowrap;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <block wx:for="{{chooseGoodsArr}}" wx:key="index">
+      <view class="pre-content">
+        <image mode="widthFix" src="{{item.url}}"></image>
+        <view class="cho-name">{{item.name}}</view>
+        <view class="cho-reason">{{item.reason}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<!-- 横条轮播图 -->
+<swiper style="height:200rpx" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{lunArr}}" wx:key="index">
+    <swiper-item>
+      <image mode="widthFix" class="lunImg" src="{{item.url}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 附近商家 -->
+<view class="preference-price" style="margin-top:20rpx">
+  <view class="pre-title">
+    <view class="pre-left">附近商家</view>
+  </view>
+  <view class="nearby {{fixedNear ? 'fixed-style-near' : ''}}" bindtap="aaa">
+    <view>综合排序<text style="padding-left:5rpx;font-size:30rpx;vertical-align: middle;" class="iconfont icon-triangle-copy-copy-copy icon-back"></text></view>
+    <view>销量高</view>
+    <view>速度快</view>
+    <view>津贴联盟</view>
+    <view>筛选<text style="padding-left:5rpx;font-size:24rpx" class="iconfont icon-shaixuan icon-back"></text></view>
+  </view>
+  <block wx:for="{{nearArr}}" wx:key="index">
+    <view class="near-content">
+      <view class="near-left">
+        <image mode="widthFix" src="{{item.url}}"></image>
+      </view>
+      <view class="near-right">
+        <view class="near-con-title">{{item.title}}</view>
+        <view class="near-con-appraise">
+          <view class="near-con-left">星星 {{item.appraise}} 月售{{item.buy_num}}</view>
+          <view class="near-con-right">{{item.distance}} | {{item.time}}分钟</view>
+        </view>
+        <view>起送￥{{item.less_money}} 配送￥{{item.new_runMoney}}
+          <text class="near-con-old">￥{{item.old_runMoney}}</text> 人均￥{{item.average_money}}</view>
+        <view>{{item.shop_name}}</view>
+        <view class="near-con-preference">
+          <block wx:for="{{item.preferenceArr.money}}" wx:for-item="item2" wx:key="index">
+            <view>{{item2}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
